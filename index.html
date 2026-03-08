@@ -26,29 +26,7 @@
     color: var(--text);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
-    cursor: none;
-  }
-
-  /* Custom cursor */
-  .cursor {
-    width: 12px; height: 12px;
-    background: var(--gold);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
-    transform: translate(-50%, -50%);
-  }
-  .cursor-ring {
-    width: 36px; height: 36px;
-    border: 1px solid rgba(255,193,7,0.4);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transition: all 0.15s ease;
-    transform: translate(-50%, -50%);
+    /* cursor: none; REMOVED */
   }
 
   /* Nav */
@@ -186,22 +164,11 @@
     border: 1px solid rgba(255,255,255,0.15);
     transition: all 0.3s;
   }
-  .btn-secondary:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
   /* Soundbars */
-  .soundbars {
-    display: flex; align-items: flex-end; gap: 4px;
-    height: 20px;
-  }
-  .bar {
-    width: 3px;
-    background: #000;
-    border-radius: 2px;
-    animation: bar 1s ease-in-out infinite;
-  }
+  .soundbars { display: flex; align-items: flex-end; gap: 4px; height: 20px; }
+  .bar { width: 3px; background: #000; border-radius: 2px; animation: bar 1s ease-in-out infinite; }
   .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
   .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
   .bar:nth-child(3) { height: 20px; animation-delay: 0.3s; }
@@ -221,8 +188,7 @@
   }
 
   .phone {
-    width: 280px;
-    height: 560px;
+    width: 280px; height: 560px;
     background: var(--bg3);
     border-radius: 48px;
     border: 2px solid rgba(255,193,7,0.2);
@@ -237,12 +203,7 @@
     50% { transform: translateY(-12px); }
   }
 
-  .phone-notch {
-    width: 80px; height: 8px;
-    background: #000;
-    border-radius: 100px;
-    margin: 0 auto 20px;
-  }
+  .phone-notch { width: 80px; height: 8px; background: #000; border-radius: 100px; margin: 0 auto 20px; }
 
   .phone-screen {
     background: var(--bg);
@@ -252,218 +213,79 @@
     overflow: hidden;
   }
 
-  .phone-header {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 22px;
-    margin-bottom: 4px;
-  }
-
+  .phone-header { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 22px; margin-bottom: 4px; }
   .phone-subtitle { color: var(--muted); font-size: 11px; margin-bottom: 20px; }
 
   .now-playing {
     background: linear-gradient(135deg, rgba(255,193,7,0.15), rgba(255,193,7,0.05));
     border: 1px solid rgba(255,193,7,0.2);
-    border-radius: 16px;
-    padding: 14px;
-    margin-bottom: 16px;
+    border-radius: 16px; padding: 14px; margin-bottom: 16px;
   }
 
   .np-label { color: var(--gold); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
   .np-title { color: var(--text); font-size: 13px; font-weight: 500; margin-bottom: 2px; }
   .np-artist { color: var(--muted); font-size: 11px; margin-bottom: 10px; }
 
-  .progress {
-    background: rgba(255,255,255,0.1);
-    height: 2px; border-radius: 2px; margin-bottom: 8px;
-  }
-  .progress-fill {
-    width: 40%;
-    height: 100%;
-    background: var(--gold);
-    border-radius: 2px;
-  }
+  .progress { background: rgba(255,255,255,0.1); height: 2px; border-radius: 2px; margin-bottom: 8px; }
+  .progress-fill { width: 40%; height: 100%; background: var(--gold); border-radius: 2px; }
 
-  .controls {
-    display: flex; justify-content: center; gap: 16px; align-items: center;
-  }
-  .ctrl { color: var(--muted); font-size: 14px; cursor: pointer; }
-  .ctrl-play {
-    width: 32px; height: 32px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: #000; font-size: 12px;
-  }
+  .controls { display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .ctrl { color: var(--muted); font-size: 14px; }
+  .ctrl-play { width: 32px; height: 32px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 12px; }
 
   .song-list { display: flex; flex-direction: column; gap: 8px; }
-  .song-item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 8px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.03);
-  }
-  .song-thumb {
-    width: 36px; height: 36px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #FFC107, #FF6F00);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; flex-shrink: 0;
-  }
+  .song-item { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 10px; background: rgba(255,255,255,0.03); }
+  .song-thumb { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #FFC107, #FF6F00); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
   .song-info { flex: 1; }
   .song-name { color: var(--text); font-size: 11px; font-weight: 500; }
   .song-artist { color: var(--muted); font-size: 10px; }
 
   /* Features */
-  .features {
-    padding: 100px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  .features { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
 
-  .section-label {
-    color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
+  .section-label { color: var(--gold); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
 
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 5vw, 56px);
-    margin-bottom: 64px;
-    line-height: 1.1;
-  }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); margin-bottom: 64px; line-height: 1.1; }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 
   .feature-card {
-    background: var(--bg3);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 24px;
-    padding: 32px;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
+    background: var(--bg3); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px; padding: 32px; transition: all 0.3s;
+    position: relative; overflow: hidden;
   }
-
   .feature-card::before {
-    content: '';
-    position: absolute; inset: 0;
+    content: ''; position: absolute; inset: 0;
     background: radial-gradient(circle at top left, rgba(255,193,7,0.05), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 0; transition: opacity 0.3s;
   }
-
   .feature-card:hover { border-color: rgba(255,193,7,0.2); transform: translateY(-4px); }
   .feature-card:hover::before { opacity: 1; }
 
-  .feature-icon {
-    width: 52px; height: 52px;
-    background: rgba(255,193,7,0.1);
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .feature-title {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
+  .feature-icon { width: 52px; height: 52px; background: rgba(255,193,7,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+  .feature-title { font-size: 18px; font-weight: 500; margin-bottom: 10px; }
   .feature-desc { color: var(--muted); font-size: 14px; line-height: 1.6; }
 
-  /* Install steps */
-  .install {
-    padding: 100px 24px;
-    background: var(--bg2);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .install::before {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(255,193,7,0.05) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
+  /* Install */
+  .install { padding: 100px 24px; background: var(--bg2); position: relative; overflow: hidden; }
+  .install::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,193,7,0.05) 0%, transparent 70%); pointer-events: none; }
   .install-inner { max-width: 700px; margin: 0 auto; position: relative; }
-
   .steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
-
-  .step {
-    display: flex; gap: 24px; align-items: flex-start;
-    padding: 24px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
+  .step { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .step:last-child { border-bottom: none; }
-
-  .step-num {
-    width: 44px; height: 44px;
-    border: 1px solid rgba(255,193,7,0.3);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--gold);
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
+  .step-num { width: 44px; height: 44px; border: 1px solid rgba(255,193,7,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 18px; flex-shrink: 0; }
   .step-text h3 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
   .step-text p { color: var(--muted); font-size: 14px; line-height: 1.5; }
 
   /* CTA */
-  .cta {
-    padding: 120px 24px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-glow {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px; height: 300px;
-    background: radial-gradient(ellipse, rgba(255,193,7,0.12), transparent 70%);
-    pointer-events: none;
-  }
-
-  .cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 7vw, 80px);
-    margin-bottom: 24px;
-    position: relative;
-  }
+  .cta { padding: 120px 24px; text-align: center; position: relative; overflow: hidden; }
+  .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 300px; background: radial-gradient(ellipse, rgba(255,193,7,0.12), transparent 70%); pointer-events: none; }
+  .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 7vw, 80px); margin-bottom: 24px; position: relative; }
   .cta p { color: var(--muted); font-size: 18px; margin-bottom: 48px; position: relative; }
 
   /* Footer */
-  footer {
-    padding: 32px 48px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  footer .logo {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 20px;
-  }
-
+  footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  footer .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 20px; }
   footer p { color: var(--muted); font-size: 13px; }
 
   @keyframes fadeUp {
@@ -479,15 +301,13 @@
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+<!-- cursor divs REMOVED -->
 
 <nav>
   <div class="nav-logo">Beat<span>ify</span></div>
   <a href="beatify.apk" class="nav-download" download>Download App</a>
 </nav>
 
-<!-- Hero -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-rings">
@@ -498,19 +318,11 @@
   </div>
   <div class="hero-content">
     <div class="hero-badge">🎵 Now Available for Android</div>
-    <h1 class="hero-title">
-      Music<br><span class="gold">Without</span><br>Limits
-    </h1>
+    <h1 class="hero-title">Music<br><span class="gold">Without</span><br>Limits</h1>
     <p class="hero-sub">Stream millions of songs in 320kbps. Free, forever. No ads, no subscriptions.</p>
     <div class="hero-buttons">
       <a href="beatify.apk" class="btn-primary" download>
-        <div class="soundbars">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
+        <div class="soundbars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
         Download APK
       </a>
       <a href="#features" class="btn-secondary">Learn More</a>
@@ -518,14 +330,12 @@
   </div>
 </section>
 
-<!-- Phone -->
 <section class="phone-section">
   <div class="phone">
     <div class="phone-notch"></div>
     <div class="phone-screen">
       <div class="phone-header">Beatify</div>
       <div class="phone-subtitle">Good evening, Aryan 👋</div>
-
       <div class="now-playing">
         <div class="np-label">▶ Now Playing</div>
         <div class="np-title">Tum Hi Ho</div>
@@ -537,35 +347,24 @@
           <span class="ctrl">⏭</span>
         </div>
       </div>
-
       <div class="song-list">
         <div class="song-item">
           <div class="song-thumb">🎵</div>
-          <div class="song-info">
-            <div class="song-name">Apna Bana Le</div>
-            <div class="song-artist">Arijit Singh</div>
-          </div>
+          <div class="song-info"><div class="song-name">Apna Bana Le</div><div class="song-artist">Arijit Singh</div></div>
         </div>
         <div class="song-item">
           <div class="song-thumb">🎶</div>
-          <div class="song-info">
-            <div class="song-name">Kesariya</div>
-            <div class="song-artist">Arijit Singh</div>
-          </div>
+          <div class="song-info"><div class="song-name">Kesariya</div><div class="song-artist">Arijit Singh</div></div>
         </div>
         <div class="song-item">
           <div class="song-thumb">🎸</div>
-          <div class="song-info">
-            <div class="song-name">Hawayein</div>
-            <div class="song-artist">Arijit Singh</div>
-          </div>
+          <div class="song-info"><div class="song-name">Hawayein</div><div class="song-artist">Arijit Singh</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Features -->
 <section class="features" id="features">
   <div class="section-label">Why Beatify</div>
   <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
@@ -603,7 +402,6 @@
   </div>
 </section>
 
-<!-- Install -->
 <section class="install" id="install">
   <div class="install-inner">
     <div class="section-label">Get Started</div>
@@ -634,7 +432,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <div class="cta-glow"></div>
   <h2>Ready to listen?</h2>
@@ -652,25 +449,6 @@
 </footer>
 
 <script>
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top = my + 'px';
-  });
-
-  function animateRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
   // Fade in on scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -687,6 +465,8 @@
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
   });
+
+  // cursor JS REMOVED
 </script>
 </body>
 </html>
